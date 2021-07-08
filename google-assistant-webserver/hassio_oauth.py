@@ -2,6 +2,11 @@
 import json
 import sys
 from pathlib import Path
+import logging
+
+_LOGGER = logging.getLogger(__name__)
+
+_LOGGER.debug('message')
 
 import cherrypy
 from requests_oauthlib import OAuth2Session
@@ -73,7 +78,10 @@ if __name__ == '__main__':
     cred_json = Path(sys.argv[2])
 
     with oauth_json.open('r') as data:
-        user_data = json.load(data)['installed']
+        try:
+            user_data = json.load(data)['installed']
+        except Exception as e:
+            _LOGGER.debug(e)
 
     cherrypy.config.update({'server.socket_port': 9324, 'server.socket_host': '0.0.0.0'})
     cherrypy.quickstart(oauth2Site(user_data, cred_json))
