@@ -79,6 +79,7 @@ if __name__ == '__main__':
 
     with oauth_json.open('r') as data:
         try:
+            _LOGGER.debug(json.load(data))
             user_data = json.load(data)['installed']
         except Exception as e:
             _LOGGER.debug(e)
