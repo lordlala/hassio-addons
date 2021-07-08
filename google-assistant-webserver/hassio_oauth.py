@@ -3,6 +3,12 @@ import json
 import sys
 from pathlib import Path
 import logging
+import pdb
+
+try:
+    pdb.set_trace()
+except:
+    pass
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -80,7 +86,7 @@ if __name__ == '__main__':
     with oauth_json.open('r') as data:
         try:
             _LOGGER.debug(json.load(data))
-            user_data = json.load(data)['installed']
+            user_data = json.load(data)['web']
         except Exception as e:
             _LOGGER.debug(e)
 
