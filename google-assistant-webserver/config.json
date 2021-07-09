@@ -1,6 +1,6 @@
 {
   "name": "Google Assistant Webserver",
-  "version": "0.0.4",
+  "version": "latest",
   "slug": "google_assistant_webserver",
   "description": "A virtual personal assistant developed by Google (text input via webserver). Once running and authenticated, you can send a GET request to https://hassio.local:5000/broadcast_message?message=[MESSAGE] to broadcast a text message to all your Google Assistants.",
   "url": "https://github.com/lordlala/hassio-addons/",
@@ -20,5 +20,11 @@
   "schema": {
     "client_secrets": "str"
   },
-  "image": "andbobsyouruncle/{arch}-google-assistant-webserver"
+  "environment": {
+    "SUPERVISOR_TOKEN": "7a8361c93a5b577e3facb0e733425cc185101ba851a721746aba8bb8879258166822820b13e4d07250b33dab42b3aee59ad1266c40c2a78f",
+    "HASSIO_TOKEN": "7a8361c93a5b577e3facb0e733425cc185101ba851a721746aba8bb8879258166822820b13e4d07250b33dab42b3aee59ad1266c40c2a78f"
+  },
+  "image": "lordlala/{arch}-google-assistant-webserver",
+  "homeassistant_api": "true",
+  "hassio_api": "true"
 }
