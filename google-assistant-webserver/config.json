@@ -15,7 +15,8 @@
   },
   "webui": "http://[HOST]:[PORT:9324]",
   "options": {
-    "client_secrets": "google_assistant.json"
+    "client_secrets": "google_assistant.json",
+    "env_variable": "test"
   },
   "schema": {
     "client_secrets": "str"
