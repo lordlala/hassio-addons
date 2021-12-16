@@ -23,8 +23,8 @@
     "env_variable": "str"
   },
   "environment": {
-    "SUPERVISOR_TOKEN": "7a8361c93a5b577e3facb0e733425cc185101ba851a721746aba8bb8879258166822820b13e4d07250b33dab42b3aee59ad1266c40c2a78f",
-    "HASSIO_TOKEN": "7a8361c93a5b577e3facb0e733425cc185101ba851a721746aba8bb8879258166822820b13e4d07250b33dab42b3aee59ad1266c40c2a78f"
+    "SUPERVISOR_TOKEN": "a",
+    "HASSIO_TOKEN": "a"
   },
   "image": "lordlala/{arch}-google-assistant-webserver",
   "homeassistant_api": "true",
